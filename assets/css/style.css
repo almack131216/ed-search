@@ -56,6 +56,14 @@ input[type=submit] {
   background-color: #fff; 
   border-top: 1px solid #d4d4d4; 
 }
+.autocomplete-items div:after {
+  content: "\f0a9";
+    font: normal normal normal 18px/1 FontAwesome;
+    display: block;
+    float:right;
+    width: 20px;
+    height: 20px;
+}
 .autocomplete-items div:hover {
   /*when hovering an item:*/
   background-color: #e9e9e9; 
