@@ -8,7 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    
     <title>Landing Page - Start Bootstrap Theme</title>
+
+    <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -34,10 +37,21 @@
             <h1 style="margin:30px auto;">Search ME!</h1>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form>
+              <!--Make sure the form has the autocomplete function switched off:-->
+            <form
+                autocomplete="off" action="/action_page.php"
+            >
               <div class="form-row">
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter...">
+                  <div class="autocomplete">
+                        <input
+                            id="myInput"
+                            type="text"
+                            name="myCountry"
+                            placeholder="Country"
+                            class="form-control form-control-lg"
+                            >
+                    </div>
                 </div>
                 <div class="col-12 col-md-3">
                   <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
@@ -53,6 +67,10 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+    <script src="assets/js/script.js"></script>
+    <script>
+        autocomplete(document.getElementById("myInput"), countries);
+    </script>
   </body>
 
 </html>
